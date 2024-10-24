@@ -13,8 +13,4 @@ export class CabineService {
   findAll(): Promise<Cabine[]> {
     return this.cabineRepository.find();
   }
-
-  findOne(id: string): Promise<Cabine> {
-    return this.cabineRepository.findOne({ where: { id: parseInt(id) } });
-  }
 }

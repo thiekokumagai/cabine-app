@@ -13,10 +13,4 @@ export class CabinesController {
   findAll(): Promise<Cabine[]> {
     return this.cabineService.findAll();
   }
-
-  // GET /cabines/:id - Obtém uma cabine por ID
-  @Get(':id')
-  findOne(@Param('id') id: string): Promise<Cabine> {
-    return this.cabineService.findOne(id);
-  }
 }

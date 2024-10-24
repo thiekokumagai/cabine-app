@@ -11,6 +11,9 @@ export class Cabine {
   @Column()
   address: string;
 
+  @Column()
+  grupo_intelbras: number;
+
   @CreateDateColumn({ type: 'timestamp' })
   created_at: Date;
 

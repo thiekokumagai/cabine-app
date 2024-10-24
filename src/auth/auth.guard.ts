@@ -7,7 +7,7 @@ export class AuthGuard implements CanActivate {
     const request: Request = context.switchToHttp().getRequest();
     const token = request.headers['authorization'];
 
-    if (token !== 'Bearer 123456') {
+    if (token !== 'Bearer '+process.env.TOKEN) {
       throw new UnauthorizedException('Token inválido.');
     }
     return true;
