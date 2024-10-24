@@ -17,8 +17,4 @@ export class CabineService {
   findOne(id: string): Promise<Cabine> {
     return this.cabineRepository.findOne({ where: { id: parseInt(id) } });
   }
-
-  create(cabine: Cabine): Promise<Cabine> {
-    return this.cabineRepository.save(cabine);
-  }
 }

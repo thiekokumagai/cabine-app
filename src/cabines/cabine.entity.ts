@@ -1,6 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn } from 'typeorm';
 
-@Entity()
+@Entity('cabines') // Defina o nome da tabela explicitamente
 export class Cabine {
   @PrimaryGeneratedColumn()
   id: number;

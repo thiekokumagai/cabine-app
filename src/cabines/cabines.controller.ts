@@ -19,10 +19,4 @@ export class CabinesController {
   findOne(@Param('id') id: string): Promise<Cabine> {
     return this.cabineService.findOne(id);
   }
-
-  // POST /cabines - Cria uma nova cabine
-  @Post()
-  create(@Body() cabine: Cabine): Promise<Cabine> {
-    return this.cabineService.create(cabine);
-  }
 }
