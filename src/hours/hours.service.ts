@@ -40,8 +40,7 @@ export class HoursService {
           .andWhere('h.id = :hourId', { hourId: hour.id })
           .getOne();
   
-        // Marca como indisponível se já foi agendado ou se a data/hora já passou
-        const unavailable = !!registro || dateTime2.isAfter(dateTime1);
+        const unavailable = !!registro || dateTime2.isAfter(dateTime1) ? true : false;
   
         return { ...hour, unavailable };
       }),
