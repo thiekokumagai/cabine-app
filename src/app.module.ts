@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { CabinesModule } from './cabines/cabines.module';
+import { LocationsModule } from './locations/locations.module';
 import { ConfigModule } from "@nestjs/config";
 @Module({
   imports: [
@@ -22,7 +23,8 @@ import { ConfigModule } from "@nestjs/config";
         trustServerCertificate: true, // Ignora a validação de certificados SSL autoassinados
       },
     } as TypeOrmModuleOptions),
-    CabinesModule
+    CabinesModule,
+    LocationsModule,
   ],
 })
 export class AppModule {}

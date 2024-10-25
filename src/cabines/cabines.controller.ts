@@ -3,7 +3,7 @@ import { CabineService } from './cabine.service';
 import { Cabine } from './cabine.entity';
 import { AuthGuard } from '../auth/auth.guard';
 
-@Controller('cabines') // Define a rota base para todas as rotas desse controlador
+@Controller('cabine') // Define a rota base para todas as rotas desse controlador
 @UseGuards(AuthGuard)
 export class CabinesController {
   constructor(private readonly cabineService: CabineService) {}
