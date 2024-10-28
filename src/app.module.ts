@@ -6,6 +6,7 @@ import { ServicesModule } from './services/services.module';
 import { DatesModule } from './dates/dates.module';
 import { HoursModule } from './hours/hours.module';
 import { ConfigModule } from "@nestjs/config";
+import { IncontrolApiModule } from './incontrol-api/incontrol-api.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -30,7 +31,8 @@ import { ConfigModule } from "@nestjs/config";
     LocationsModule,
     ServicesModule,
     DatesModule,
-    HoursModule
+    HoursModule,
+    IncontrolApiModule
   ],
 })
 export class AppModule {}
